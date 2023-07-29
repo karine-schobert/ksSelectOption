@@ -1,0 +1,8 @@
+h1{
+    margin: 2rem;
+}
+.container-fluid{
+    background: #eeeeee;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
