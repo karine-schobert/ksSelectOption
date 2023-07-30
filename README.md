@@ -1,5 +1,11 @@
-## KsSelect Option
+# KsSelectOption
 
+## Exercice d'insertion dans le Dom d'éléments html en javascript 
+
+
+### Objectifs
+
+Crée une interface utilisateur avec un titre et un formulaire contenant des sélecteurs pour différentes voitures, tout en javascript et en utilisant la fonction qui creait des éléments.
 
 
 ```javascript

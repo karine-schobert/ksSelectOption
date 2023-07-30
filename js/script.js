@@ -7,7 +7,6 @@ const app={
    init:()=>{
     console.log('je suis dans mon init');
    
-   
     app.containerElem= document.querySelector('.container-fluid');
    //  console.log( app.drawElement);
    data.initListcarFromData();
@@ -34,26 +33,16 @@ creatForm:()=>{
    data.listcars.forEach((listcars)=>{
     //creation de la div 
    const divElem = app.drawElement('div',FormElem,{className:"input-group mb-3"});   
-   const labelElem= app.drawElement('label', divElem,{className:"input-group-text w-25 bg-primary", textContent:listcars.references});     
+   const labelElem= app.drawElement('label', divElem,{className:"input-group-text m-2 w-75 bg-success text-uppercase", textContent:listcars.references});     
     // creation du selecte 
-   const selectElem = app.drawElement('select',labelElem,{className:"form-select"});
+   const selectElem = app.drawElement('select',labelElem,{className:"form-select "});
    //creation del'option
    // chercher les elments du tableau pour chaque option
-   data.listcars.forEach((listcars)=>{
-      const optionElem =app.drawElement('option', selectElem,{textContent:listcars.name});
-   
-   })
-
+      const optionElem =app.drawElement('option', selectElem,{className:"list-item",textContent:listcars.names});
+      app.drawElement('option', selectElem,{className:"list-item",textContent:listcars.choicesTwo});
+      app.drawElement('option', selectElem,{className:"list-item",textContent:listcars.choicesThree});
 })
- 
-  
-   
-   
-
 },
-
-
-
 
   /**
   *
@@ -64,21 +53,17 @@ creatForm:()=>{
   * @return  Node : l'élément créer
   */
   drawElement: (nameBalise, containerNode, objectList = {}) => {
-   //creation de l'élemént
+   //creation de l'élement
    const element = document.createElement(nameBalise);
    console.log(element);
 
-   //on copie tous les elment 
+   //on copie tous les élément 
    Object.assign(element,objectList)
 
    containerNode.appendChild(element);
 
    return element;
   }
-
- 
-
-
 
 };
 // on initialise l'app dès que le document est prêt
